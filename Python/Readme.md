@@ -1,176 +1,141 @@
-## HOW TO USE THIS COLLECTION
+# Python Project Accelerator: Master Collection
+*A structured, modular toolkit for Python projects—from data extraction to machine learning.*
 
-### Quick Reference Guide:
+## Quick Start Table
 
-| **Use Case** | **Prompt to Use** | **Best For** |
-|--------------|-------------------|--------------|
-| Scraping websites | #1 Web Scraping | APIs, HTML parsing, browser automation |
-| Processing CSV/data | #2 Data Processing | pandas, large files, ETL pipelines |
-| Building APIs | #3 API Development | REST, FastAPI, Flask, Django REST |
-| Machine learning | #4 Data Science & ML | Modeling, predictions, analysis |
-| Database work | #5 Database & SQL | Schema design, queries, ORMs |
-| Concurrent tasks | #6 Async & Concurrency | Parallel processing, async/await |
-| Improving code | #7 Refactoring | Cleanup, optimization, modernization |
-| Fixing bugs | #8 Debugging | Error handling, troubleshooting |
+| Goal                     | Prompt               | Key Features                                                                 |
+|--------------------------|----------------------|------------------------------------------------------------------------------|
+| Extract web data         | Web Scraping         | Ethical scraping, JavaScript rendering, rate limits, anti-bot bypass       |
+| Clean/transform data     | Data Processing      | Pandas/Numpy, memory optimization, parallel processing, data validation    |
+| Build APIs/microservices | API Development      | FastAPI/Flask, authentication (JWT/OAuth), async support, OpenAPI docs      |
+| Train ML models          | Data Science & ML    | Scikit-learn/TensorFlow, feature engineering, explainability, MLOps pipelines |
+| Manage databases         | Database & SQL       | PostgreSQL/MongoDB, ORM (SQLAlchemy), migrations, query optimization        |
+| Speed up tasks           | Async & Concurrency  | Asyncio, threading, multiprocessing, task queues (Celery/RQ)                |
+| Modernize code           | Refactoring          | PEP 8 compliance, type hints, design patterns, technical debt reduction     |
+| Fix errors               | Debugging            | Logging, error handling, memory leaks, race conditions, CI/CD integration   |
 
-### Usage Template:
+## Usage Template
 
-```
-[Copy one of the 8 prompts above]
+Use this structure for any project:
 
-MY [TYPE] PROJECT:
-
-Problem: [What you're trying to solve]
-Context: [Any relevant details]
-Code: [If improving/debugging existing code]
-Constraints: [Time, resources, requirements]
-Questions: [Anything specific you're unsure about]
-```
-
-## POWER USER TIPS
-
-### 1. **Combine Prompts When Needed**
-Example: "I need to scrape data (#1) and then build an API (#3) to serve it"
-- Use both prompts sequentially
-- Reference outputs between them
-
-### 2. **Start Simple, Scale Up**
-Every prompt emphasizes MVP:
-- Test with small data first
-- Add features incrementally
-- Measure before optimizing
-
-### 3. **Trust the Recommendations**
-Prompts are designed to reduce decision fatigue:
-- "I recommend X because Y" - just go with it
-- Test the MVP, adjust later if needed
-- Don't overthink the initial approach
-
-### 4. **Save Your Customizations**
-Add project-specific context:
-```
-[Paste prompt]
-
-ADDITIONAL CONTEXT FOR MY PROJECT:
-- We use Python 3.11
-- Deploy on AWS Lambda
-- Team prefers FastAPI over Flask
-- Must work with legacy database
+```markdown
+[PASTE PROMPT HERE]
+PROJECT OVERVIEW
+- Problem: [Describe the core issue in 1-2 sentences]
+- Data/Inputs: [Specify format, size, and sources]
+- Outputs: [Define expected deliverables]
+- Constraints: [List time, tech stack, or compliance requirements]
+- Edge Cases: [Identify 2-3 critical scenarios]
+- Questions: [Highlight uncertainties or tradeoffs]
 ```
 
-### 5. **Keep Edge Cases in Mind**
-Each prompt lists 8-15 edge cases:
-- Review them before starting
-- Mention any that apply to your case
-- Trust the code will handle them
+## Power User Patterns
 
-## PROMPT COMPARISON MATRIX
-
-| Feature | General | Scraping | Data | API | ML | Database | Async | Refactor | Debug |
-|---------|---------|----------|------|-----|----|----|-------|----------|-------|
-| MVP Focus | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
-| Edge Cases Listed | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
-| Test Mode | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
-| Error Handling | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅✅ |
-| Progress Tracking | ✅ | ✅ | ✅ | - | ✅ | - | ✅ | - | - |
-| Resume Capability | ✅ | ✅ | ✅ | - | - | - | ✅ | - | - |
-| Security Focus | ✅ | ✅ | - | ✅✅ | - | ✅ | - | - | - |
-| Performance Focus | ✅ | ✅ | ✅✅ | ✅ | ✅ | ✅✅ | ✅✅ | ✅✅ | - |
-| Ethical Guidelines | - | ✅✅ | - | - | ✅ | - | - | - | - |
-
-**Legend:**
-- ✅ = Included
-- ✅✅ = Major Focus
-- \- = Not Primary Focus
-
-## 🎓 ADVANCED USAGE PATTERNS
-
-### Pattern 1: Sequential Pipeline
+### 1. Sequential Workflows
+**Example: ETL Pipeline**
 ```
-Step 1: Use #1 (Web Scraping) to get data
-Step 2: Use #2 (Data Processing) to clean it
-Step 3: Use #5 (Database) to store it
-Step 4: Use #3 (API) to serve it
+Step 1: Web Scraping → Extract data
+Step 2: Data Processing → Clean and transform
+Step 3: Database → Store processed data
+Step 4: API Development → Serve data via API
 ```
+**Recommendation:** Use `--resume` flags in scripts to handle interruptions.
 
-### Pattern 2: ML Project Lifecycle
-```
-Step 1: Use #2 (Data Processing) for EDA
-Step 2: Use #4 (ML) for modeling
-Step 3: Use #3 (API) for serving predictions
-Step 4: Use #8 (Debugging) for production issues
-```
+### 2. Parallel Tracks
+**Example: ML + API**
+- **Track 1:** Data Science & ML → Train and save model (e.g., `.pkl` file)
+- **Track 2:** API Development → Build API endpoint to load and serve the model
+- **Merge:** Deploy the API with the model using Docker.
 
-### Pattern 3: Legacy Code Improvement
-```
-Step 1: Use #8 (Debugging) to understand issues
-Step 2: Use #7 (Refactoring) to modernize
-Step 3: Use #6 (Async) to improve performance
-```
+### 3. Legacy System Improvement
+**Example: Refactor Monolith**
+1. Debugging → Identify bottlenecks and errors.
+2. Refactoring → Modularize components and improve code quality.
+3. Async & Concurrency → Add concurrency for slow or blocking tasks.
 
-## REAL-WORLD EXAMPLES
+## Risk Mitigation Matrix
 
-### Example 1: E-commerce Price Monitor
-```
-[Use Prompt #1: Web Scraping]
+| Risk                     | Prompt       | Solution                                                                 |
+|--------------------------|--------------|--------------------------------------------------------------------------|
+| Scraping blocked         | Web Scraping | Rotate user agents, use proxies, respect `robots.txt`                     |
+| Memory errors            | Data Processing | Chunk data, use `dask`, optimize data types                            |
+| API downtime             | API Development | Implement rate limiting, circuit breakers, and health checks          |
+| Model drift              | Data Science & ML | Monitor predictions, set retraining triggers, use A/B testing       |
+| Slow database queries    | Database & SQL | Add indexes, analyze queries, use read replicas                         |
+| Race conditions          | Async & Concurrency | Use locks, `asyncio.Semaphore`, ensure transactional integrity         |
+| Technical debt           | Refactoring  | Prioritize using `pylint`, refactor incrementally, write tests first   |
+| Silent failures          | Debugging    | Implement structured logging, integrate Sentry, use assert statements |
 
-MY WEB SCRAPING PROJECT:
-I want to monitor prices of 50 products across 3 e-commerce sites daily.
-Need to detect price changes and send alerts.
-Sites use JavaScript for dynamic loading.
-```
+## Edge Cases Checklist
 
-### Example 2: Customer Data ETL
-```
-[Use Prompt #2: Data Processing]
+Always consider:
+- **Data:** Are there nulls, duplicates, or inconsistent formats? (Web Scraping, Data Processing)
+- **Scale:** Will the solution handle 10x the current data volume? (Data Processing, Database & SQL)
+- **Security:** Are API keys, secrets, or sensitive data exposed? (API Development, Database & SQL)
+- **Failure:** What happens if a dependency crashes or a network request fails? (Async & Concurrency, Debugging)
+- **Compliance:** Are there legal or regulatory requirements (e.g., GDPR, CCPA)? (Web Scraping, Data Science & ML)
 
-MY DATA PROCESSING TASK:
-Process 5GB of customer transaction CSV files daily.
-Need to clean, aggregate, and generate reports.
-Current pandas script runs out of memory.
-```
+## Performance Cheat Sheet
 
-### Example 3: Internal Tool API
-```
-[Use Prompt #3: API Development]
+| Task                     | Tool                     | When to Use                                      |
+|--------------------------|--------------------------|--------------------------------------------------|
+| Scrape 10,000+ pages     | Scrapy + Scrapy-Zyte     | JavaScript-heavy sites, distributed crawling     |
+| Process 10GB+ CSV files  | Dask or Modin            | Out-of-core computation                          |
+| High-traffic API         | FastAPI + Uvicorn        | Async routes, WebSocket support                  |
+| Real-time ML predictions | TensorFlow Serving       | Low-latency inference                            |
+| Database migrations      | Alembic                  | Schema changes without downtime                 |
 
-MY API PROJECT:
-Build internal API for employee directory.
-CRUD operations on employee records.
-Need auth (SSO), search, filtering.
-Will be used by 3 internal apps.
+## Debugging Flowchart
+
+1. **Error Occurs**
+   - Is there a log available?
+     - **Yes:** Check the traceback for details.
+     - **No:** Add logging to capture the error.
+2. **Known Issue?**
+   - **Yes:** Apply the fix from the Debugging prompt.
+   - **No:** Isolate the issue in a test case and seek community input.
+
+## Real-World Examples
+
+### 1. Competitor Price Tracker
+```markdown
+[Web Scraping]
+PROJECT OVERVIEW
+- Problem: Track 200 SKUs across 5 retailers daily.
+- Data: Dynamic JavaScript-rendered pages, potential CAPTCHAs.
+- Outputs: CSV reports + Slack alerts for price changes.
+- Constraints: Avoid IP blocks, budget under $50/month.
+- Edge Cases: Flash sales, login walls, regional pricing.
 ```
 
-### Example 4: Sales Forecasting
+### 2. Healthcare Data Pipeline
+```markdown
+[Data Processing] + [Database]
+PROJECT OVERVIEW
+- Problem: Ingest and process 1M patient records while ensuring HIPAA compliance.
+- Data: HL7/FHIR formats, 30% missing values.
+- Outputs: PostgreSQL database + audit logs.
+- Constraints: No Protected Health Information (PHI) in logs, 99.9% uptime required.
 ```
-[Use Prompt #4: Data Science & ML]
 
-MY ML PROJECT:
-Predict next month's sales for 100 product categories.
-Have 2 years of historical sales data.
-Need model that explains predictions to business users.
-```
+## Advanced Tips
 
-## MASTER COLLECTION SUMMARY
+1. **Combine Prompts:** Use Web Scraping + Data Processing + Database for end-to-end data pipelines.
+2. **Parameterize:** Replace hardcoded values with environment variables (e.g., `DB_URL`).
+3. **Test Modes:** Every prompt includes a `--dry-run` flag for safe testing.
+4. **Documentation:** Auto-generate documentation with API Development (FastAPI) or Data Science & ML (model metadata).
+5. **Monitoring:** Integrate Debugging with Prometheus and Grafana for observability.
 
-You now have **9 specialized prompts** (including the original general one):
+## Starter Kits
 
-1. **General Python** - Any Python task
-2. **Web Scraping** - Ethical data extraction
-3. **Data Processing** - pandas, large files, ETL
-4. **API Development** - REST APIs, backends
-5. **ML & Data Science** - Modeling, predictions
-6. **Database & SQL** - Schema design, queries
-7. **Async & Concurrency** - Parallel processing
-8. **Code Refactoring** - Improve existing code
-9. **Debugging & Errors** - Fix issues, robust handling
+| Prompt               | GitHub Template          | Key Files                          |
+|----------------------|--------------------------|-------------------------------------|
+| Web Scraping         | scrapy-project           | `settings.py`, `middlewares.py`     |
+| API Development      | fastapi-template         | `main.py`, `Dockerfile`, `test.py`  |
+| Data Science & ML    | mlops-baseline           | `train.py`, `requirements.txt`     |
 
-**Each prompt delivers:**
-- 10-15 clarifying questions
-- 8-12 edge cases identified
-- Clear recommendations (reduce decision fatigue)
-- MVP-first approach with test modes
-- Production-ready code
-- First-time success rate: Very high! 
+## The Path To Usage
 
-**Save this artifact** - it's your complete Python development toolkit! 
+1. **Start Small:** Pick one prompt and complete a project end-to-end.
+2. **Combine Prompts:** Use two prompts (e.g., Web Scraping + API Development) for a real-world use case.
+3. **Contribute:** Share edge cases, optimizations, or templates with the community.
