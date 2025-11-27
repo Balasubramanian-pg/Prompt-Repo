@@ -1,4 +1,4 @@
-# README — How to Use the Three Agent Files
+# README How to Use the Three Agent Files
 
 This README explains the purpose of each file you now have for your **10× Streamlit Developer Agent**, and how they work together. Each file plays a different role in controlling the behavior, safety, and output quality of the LLM.
 
