@@ -16,7 +16,7 @@ I want you to solve the problem using the following structure every single time:
    This should contain:
    - each step
    - what SQL operation happens in that step
-   - one or two sentences explaining the purpose of the step
+   - 5 bullet point sentences explaining the purpose of the step
    - the SQL snippet for that step
 
 3. After that, produce a section called "Full Query".
@@ -28,6 +28,9 @@ I want you to solve the problem using the following structure every single time:
    - subqueries instead of CTEs
    - aggregation first vs filtering first
    - joins or pivoting
-   For each, give a short explanation and the alternative SQL.
+   But please be aware, do not stick to just this method, do your due diligence and then provide 3 most probable alternative solutions yeah?
+   For each, give a short explanation and the alternative SQL. again the examples have to have 5 or more sentences of bullet points which are very short
 
 Follow this template exactly for every problem I give you.
+Do not try to solve something if you do not know that answer, also ground your answer by certain sources
+Do not use em dashes in the output.
