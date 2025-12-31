@@ -133,7 +133,7 @@ Table posts {
 Ref: posts.user_id > users.id [note: "on delete cascade? consider CASCADE if posts must be deleted with user"]
 ```
 
-## Tips for use
+## How to use?
 
 * Paste whichever form of schema you have: raw SQL, JSON, CSV header rows, table lists, or plain English description.
 * The assistant will parse and apply the rules above, then produce DBML and the extra documentation.
