@@ -1,4 +1,4 @@
-## DATA PROCESSING & Pandas Master Prompt
+## DATA Processing & Pandas Master Prompt
 
 ### When to Use:
 - Large dataset manipulation
