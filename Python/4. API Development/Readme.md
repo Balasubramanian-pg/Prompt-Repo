@@ -1,4 +1,4 @@
-## 4. API DEVELOPMENT MASTER PROMPT
+## 4. API DEVELOPMENT Master prompt
 
 ### When to Use:
 - Building REST APIs
