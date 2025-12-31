@@ -1,4 +1,4 @@
-# Master prompt — convert a supplied schema into DBML for a database diagram
+# Master prompt - convert a supplied schema into DBML for a database diagram
 
 Use this prompt when you want an assistant (or an automated tool) to produce clean, production-ready DBML from a schema you will paste. Copy the entire block below, replace the `<SCHEMA>` placeholder with your schema text (tables, columns, sample rows, or plain-language description), then send it to the assistant that generates DBML.
 
