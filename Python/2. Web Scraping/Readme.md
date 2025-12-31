@@ -1,4 +1,4 @@
-## 2. WEB SCRAPING & AUTOMATION MASTER PROMPT
+## 2. WEB SCRAPING & AUTOMATION Master Prompt
 
 ### When to Use:
 - Scraping websites, APIs, or web data
